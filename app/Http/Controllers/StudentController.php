@@ -20,6 +20,7 @@ class StudentController extends Controller
 
     public function store(Request $request)
     {
+        //validasi data yang dikirimkan dari form
         $validatedData = $request->validate([
             'nim' => 'required|unique:students,nim',
             'nama' => 'required',
