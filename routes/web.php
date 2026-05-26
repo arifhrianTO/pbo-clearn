@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 
 // Include Student Controller
@@ -28,3 +29,10 @@ Route::PUT('/student/edit/{id}', [StudentController::class, 'update'])
 
 Route::DELETE('/student/delete/{id}', [StudentController::class, 'destroy'])
     ->name('student.destroy');
+
+//new line
+Route::get('/student/download/{id}', [StudentController::class, 'download'])
+    ->name('student.download');
+
+Route::get('/student/preview/{id}', [StudentController::class, 'preview'])
+    ->name('student.preview');
